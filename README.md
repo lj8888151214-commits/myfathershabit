@@ -92,10 +92,3 @@
 | <img width="590" height="1278" alt="KakaoTalk_20261003_124849780_01" src="https://github.com/user-attachments/assets/dd24a59c-13f7-4fde-a1a2-640b5db3c385" />
 |<img width="590" height="1278" alt="KakaoTalk_20261003_124849780_03" src="https://github.com/user-attachments/assets/91f636f2-7167-4653-aa1c-ecac3cdf7a5c" />
 |<img width="1179" height="2556" alt="image" src="https://github.com/user-attachments/assets/222f5a6b-41d6-47c4-b856-064730103bb6" />
-
-| *업로드 이미지 분석 및 품목/신뢰도 검증* | *배출 품목별 리워드 포인트 자동 적립 내역* |
-
-| 카카오맵 기반 주변 수거 거점 탐색 | 배출 통계 및 마이페이지 |
-| :---: | :---: |
-| <img src="이미지주소3" width="380" alt="거점 지도 화면"/> | <img src="이미지주소4" width="380" alt="통계 차트 화면"/> |
-| *현재 위치 기반 인근 무인 회수기 좌표 오버레이* | *Chart.js 기반 일별/품목별 배출 통계 시각화* |
