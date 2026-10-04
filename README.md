@@ -1,4 +1,4 @@
-<img width="590" height="1278" alt="KakaoTalk_20261003_124849780" src="https://github.com/user-attachments/assets/f0cbd978-a316-4885-a331-963365f10a00" />
+
 # ♻️ RC (Recycle Clean) - 아빠의 습관 (myfathershabit)
 > **AI 컴퓨터 비전 기반 객체 인식 및 분리배출 리워드/포인트 관리 웹 서비스**
 
@@ -87,7 +87,7 @@
 ### 📱 5. 주요 화면 시각 자료
 
 | 카메라 촬영 및 AI 객체 인식 | 포인트 적립 및 리워드 대시보드 |
-| :---: | :---: |
+|<img width="590" height="1278" alt="KakaoTalk_20261003_124849780" src="https://github.com/user-attachments/assets/f0cbd978-a316-4885-a331-963365f10a00" />
 | <img width="590" height="1278" alt="KakaoTalk_20261003_124849780_01" src="https://github.com/user-attachments/assets/52186484-6c46-4ba3-bc36-eb0e21a7da3c" />
 |<img width="590" height="1278" alt="KakaoTalk_20261003_124849780_03" src="https://github.com/user-attachments/assets/91f636f2-7167-4653-aa1c-ecac3cdf7a5c" />
 |<img width="1179" height="2556" alt="image" src="https://github.com/user-attachments/assets/222f5a6b-41d6-47c4-b856-064730103bb6" />
