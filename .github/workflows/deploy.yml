@@ -1,0 +1,80 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Create dummy application.properties for packaging
+        run: |
+          mkdir -p src/main/resources
+          echo "spring.application.name=RC" > src/main/resources/application.properties
+
+      - name: Build with Maven
+        run: mvn clean package -DskipTests
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-jar
+          path: target/RC-*.jar
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: app-jar
+          path: target
+
+      - name: Transfer JAR to EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          source: "target/RC-*.jar"
+          target: "/home/ec2-user/shop/"
+          strip_components: 1
+
+      - name: Restart Application on EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /home/ec2-user/shop
+
+            CURRENT_PID=$(pgrep -f "RC-.*jar")
+            if [ -n "$CURRENT_PID" ]; then
+              kill -15 $CURRENT_PID
+              sleep 5
+            fi
+
+            if [ -f ".env" ]; then
+              set -a
+              source .env
+              set +a
+            fi
+
+            JAR_NAME=$(ls -tr RC-*.jar | tail -n 1)
+            nohup java -jar $JAR_NAME > nohup.out 2>&1 &
