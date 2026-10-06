@@ -27,11 +27,6 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Create dummy application.properties for packaging
-        run: |
-          mkdir -p src/main/resources
-          echo "spring.application.name=RC" > src/main/resources/application.properties
-
       - name: Build with Maven
         run: mvn clean package -DskipTests
 
