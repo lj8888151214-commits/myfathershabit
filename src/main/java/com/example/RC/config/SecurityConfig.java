@@ -43,6 +43,7 @@ public class SecurityConfig {
     }
 
     // 카카오 PKCE 파라미터 충돌(:1 오류)을 방지하는 리졸버 설정
+    // PKCE 파라미터 충돌(카카오, 구글 code_verifier 불일치)을 방지하는 리졸버 설정
     private OAuth2AuthorizationRequestResolver authorizationRequestResolver(ClientRegistrationRepository clientRegistrationRepository) {
         DefaultOAuth2AuthorizationRequestResolver resolver =
                 new DefaultOAuth2AuthorizationRequestResolver(clientRegistrationRepository, "/oauth2/authorization");
@@ -51,9 +52,11 @@ public class SecurityConfig {
             customizer.attributes(attributes -> {
                 attributes.remove("code_challenge");
                 attributes.remove("code_challenge_method");
+                attributes.remove("code_verifier"); // <-- 필수: 세션에 verifier가 남지 않도록 제거
             }).additionalParameters(params -> {
                 params.remove("code_challenge");
                 params.remove("code_challenge_method");
+                params.remove("code_verifier");
             });
         });
 
