@@ -194,7 +194,7 @@ export default function Dashboard({ onBack, userInfo }) {
 
       const data = await res.json();
       if (data.success) {
-        alert(`🎉 [QR 인식 성공] 에코포인트가 내 지갑으로 합산되었습니다!\n${data.message || ''}`);
+        alert(`🎉 [QR 인식 성공] 에코포인트가 내 지갑으로 합산되었습니다.!\n${data.message || ''}`);
         fetchLatestPoints();
         fetchRewardHistory();
       } else {
