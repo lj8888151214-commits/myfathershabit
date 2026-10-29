@@ -15,6 +15,10 @@
 
 ---
 
+https://github.com/user-attachments/assets/5b886235-7d6c-4bd9-a324-291866d88056
+
+
+
 ### 🛠 2. 사용 기술 (Tech Stack)
 
 #### Backend & Security
