@@ -86,10 +86,32 @@
 
 ---
 
-### 📱 5. 주요 화면 시각 자료
+#### 1. 📷 웹 접속 화면
+> **시작버튼이 있고 에코 챗봇을 볼 수 있다.**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f0cbd978-a316-4885-a331-963365f10a00" width="60%" alt="첫 화면" />
+</p>
 
-| 카메라 촬영 및 AI 객체 인식 | 포인트 적립 및 리워드 대시보드 |
-|<img width="590" height="1278" alt="KakaoTalk_20261003_124849780" src="https://github.com/user-attachments/assets/f0cbd978-a316-4885-a331-963365f10a00" />
-| <img width="590" height="1278" alt="KakaoTalk_20261003_124849780_01" src="https://github.com/user-attachments/assets/52186484-6c46-4ba3-bc36-eb0e21a7da3c" />
-|<img width="590" height="1278" alt="image" src="https://github.com/user-attachments/assets/66dfc5cf-26aa-4686-b761-64cd0fa6d70f" />
-|<img width="590" height="1278" alt="image" src="https://github.com/user-attachments/assets/222f5a6b-41d6-47c4-b856-064730103bb6" />
+---
+
+#### 2. 🎁 메인화면
+> **딥 러닝 파일로 사물을 인식할 수 있고 리워드, 주변재활용 현황, 언어 선택을 할 수 있다.**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/52186484-6c46-4ba3-bc36-eb0e21a7da3c" width="60%" alt="포인트 적립 및 리워드 대시보드" />
+</p>
+
+---
+
+#### 3. 📱 리워드 공유
+> **QR코드 또는 기타 수단으로 리워드를 보거나 공유할 수 있다.**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/66dfc5cf-26aa-4686-b761-64cd0fa6d70f" width="60%" alt="화면 3" />
+</p>
+
+---
+
+#### 4. 📱 효율적인 재활용 유도
+> **물건에 라벨이 있을 경우 챗봇이 알림을 할 수 있다.**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/222f5a6b-41d6-47c4-b856-064730103bb6" width="60%" alt="화면 4" />
+</p>
